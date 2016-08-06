@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息卡片模式</title>
+    <style type="text/css">
+       /*设置一些通用的样式*/
+        *{
+            margin: 0; padding: 0; text-decoration: none;
+        }
+        body{
+            font-family: "微软雅黑" ,serif; font-size: 14px;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            height: auto; width: 550px; margin: 0 auto; border: 1px solid #ccc;overflow: hidden;
+        }
+        .top{
+            height: 40px;
+        }
+        .top a {
+            height: 16px; width: 16px; display: block; float: right;  margin:5px ;
+        }
+        /*右上角图标定位，使用雪碧图的方法*/
+        .btn-list-off{
+            background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -38px 0;
+        }
+        .btn-car-on{
+             background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -21px -34px;
+         }
+        #box ul li{
+            height:auto;width: 164px;border: 1px solid #aaa;float: left;margin: 5px;overflow: hidden;
+        }
+        .a-img{
+            height: 164px; width: 164px; display: block; overflow: hidden;
+        }
+        /*将ul 中的文字设置样式*/
+        p a, p span {
+            display: block; line-height: 23px; padding-left: 10px;
+        }
+        .bottom{
+            height: 40px; line-height: 40px;text-align: center; background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!--列表的头部部分-->
+        <div class="top">
+            <a href="#" title="列表模式" class="btn-list-off"></a>
+            <a href="#" title="卡片模式" class="btn-car-on"></a>
+        </div>
+        <!--列表的中间部分-->
+        <ul>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <a href="#" class="a-img">
+                        <img src="images/big.jpg"/>
+                    </a>
+                    <p>
+                        <a href="#">白阳</a>
+                        <span>辽宁</span>
+                        <span>21个共同好友</span>
+                    </p>
+                    <div class="bottom">未分组的好友</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

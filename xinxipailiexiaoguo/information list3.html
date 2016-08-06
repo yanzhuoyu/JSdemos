@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息卡片模式与列表模式交互</title>
+    <style type="text/css">
+        /*设置一些通用的样式*/
+        *{
+            margin: 0; padding: 0; text-decoration: none;
+        }
+        body{
+            font-family: "微软雅黑", serif; font-size: 14px;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            height: auto; width: 550px; margin: 0 auto; border: 1px solid #ccc;overflow: hidden;
+        }
+        .top{
+            height: 40px;
+        }
+        .top a {
+            height: 16px; width: 16px; display: block; float: right;  margin:5px ;
+        }
+        /*右上角图标定位，使用雪碧图的方法，通过鼠标点击事件，改变元素的class值btn-list-off为btn-list-on*/
+        .btn-list-off{
+            background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -38px 0;
+        }
+        .btn-car-on{
+            background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -21px -34px;
+        }
+        .btn-list-on{
+            background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -21px -0px;
+        }
+        .btn-car-off{
+            background: #fff url("../xinxipailiexiaoguo/images/btns.jpg") no-repeat -38px -32px;
+        }
+        #box ul li{
+            height:auto;width: 164px;border: 1px solid #aaa;float: left;margin: 5px;overflow: hidden;
+        }
+        .a-img{
+            height: 164px; width: 164px; display: block; overflow: hidden;
+        }
+        /*将ul 中的文字设置样式*/
+        p a, p span {
+            display: block; line-height: 23px; padding-left: 10px;
+        }
+        .bottom{
+            height: 40px; line-height: 40px;text-align: center; background: #ccc;
+        }
+        .small{
+            height: 50px;width: 50px; display: block; float: left;padding-right: 5px;
+        }
+    </style>
+    <!--加入script函数，使得点击右上角的按钮时，可以切换显示效果-->
+    <script type="text/javascript">
+        window.onload = function(){
+            //获取按钮
+            var listBtn = document.getElementById("btn1");
+            var carBtn = document.getElementById("btn2");
+            var imgs = document.getElementsByTagName("img");
+
+
+            listBtn.onclick = function(){
+                //改变按钮的class值
+                listBtn.className = "btn-list-on";
+                carBtn.className = "btn-car-off";
+                //改变每一个图片的路径以及它的对应的父节点的class值
+                for( var i=0;i<imgs.length;i++){
+                    imgs[i].src = "images/small.jpg";
+                    imgs[i].parentNode.className = "a-img small";
+                }
+
+            }
+            carBtn.onclick = function(){
+                //改变按钮的class
+                listBtn.className = "btn-list-off";
+                carBtn.className = "btn-car-on";
+                //改变每一个图片的路径以及它的对应的父节点的class值
+                for( var i=0;i<imgs.length;i++){
+                    imgs[i].src = "images/big.jpg";
+                    imgs[i].parentNode.className = "a-img";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="box">
+    <!--列表的头部部分-->
+    <div class="top">
+        <a href="#" title="列表模式" id="btn1" class="btn-list-off"></a>
+        <a href="#" title="卡片模式" id="btn2" class="btn-car-on"></a>
+    </div>
+    <!--列表的中间部分-->
+    <ul>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img">
+                    <img src="images/big.jpg"/>
+                </a>
+                <p>
+                    <a href="#">白阳</a>
+                    <span>辽宁</span>
+                    <span>21个共同好友</span>
+                </p>
+                <div class="bottom">未分组的好友</div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
